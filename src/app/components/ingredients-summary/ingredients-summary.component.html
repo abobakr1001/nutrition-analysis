@@ -1,0 +1,25 @@
+<!-- <div *ngIf="result">
+  <h3>Nutrition Facts</h3>
+  <p>Calories: {{ result.calories }}</p>
+  <p>Fat: {{ result.totalNutrients.FAT.quantity }} {{ result.totalNutrients.FAT.unit }}</p>
+  <p>Carbohydrates: {{ result.totalNutrients.CHOCDF.quantity }} {{ result.totalNutrients.CHOCDF.unit }}</p>
+  <p>Protein: {{ result.totalNutrients.PROCNT.quantity }} {{ result.totalNutrients.PROCNT.unit }}</p>
+</div> -->
+
+
+  <div class="nutrition-box p-3 bg-white rounded">
+    <h3>Nutrition Facts</h3>
+  <p><strong>Calories:</strong> {{ result?.calories }} kcal</p>
+  <p><strong>Fat:</strong> {{ result?.totalNutrients?.FAT?.quantity }} {{ result?.totalNutrients?.FAT?.unit }}</p>
+  <p><strong>Cholesterol:</strong> {{ result?.totalNutrients?.CHOLE?.quantity }} {{ result?.totalNutrients?.CHOLE?.unit }}</p>
+  <p><strong>Sodium:</strong> {{ result?.totalNutrients?.NA?.quantity }} {{ result?.totalNutrients?.NA?.unit }}</p>
+  <p><strong>Carbohydrates:</strong> {{ result?.totalNutrients?.CHOCDF?.quantity }} {{ result?.totalNutrients?.CHOCDF?.unit }}</p>
+
+  <p><strong>Protein:</strong> {{ result?.totalNutrients?.PROCNT?.quantity }} {{ result?.totalNutrients?.PROCNT?.unit }}</p>
+  <p><strong>Vitamin C:</strong> {{ result?.totalNutrients?.VITC?.quantity}} {{ result?.totalNutrients?.VITC?.unit }}</p>
+  <p><strong>Vitamin B6:</strong> {{ result?.totalNutrients?.VITD?.quantity }} {{ result?.totalNutrients?.VITD?.unit }}</p>
+  <p><strong>Calcium:</strong> {{ result?.totalNutrients?.CA?.quantity }} {{ result?.totalNutrients?.CA?.unit }}</p>
+  <p><strong>Iron:</strong> {{ result?.totalNutrients?.FE?.quantity}} {{ result?.totalNutrients?.FE?.unit }}</p>
+  <p><strong>Potassium:</strong> {{ result?.totalNutrients?.K?.quantity}} {{ result?.totalNutrients?.K?.unit }}</p>
+</div>
+

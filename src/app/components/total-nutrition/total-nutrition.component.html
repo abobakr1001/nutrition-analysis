@@ -1,0 +1,27 @@
+<table class="table table-striped mt-3" *ngIf="ingredients != null">
+  <thead>
+    <tr>
+      <th>Qty</th>
+      <th>Unit</th>
+      <th>Food</th>
+
+      <th>Weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingredient of ingredients">
+      <td *ngFor="let parsedItem of ingredient.parsed">
+        {{ parsedItem.quantity }}
+      </td>
+      <td *ngFor="let parsedItem of ingredient.parsed">
+        {{ parsedItem.measure }}
+      </td>
+      <td *ngFor="let parsedItem of ingredient.parsed">
+        {{ parsedItem.food }}
+      </td>
+      <td *ngFor="let parsedItem of ingredient.parsed">
+        {{ parsedItem.weight }}
+      </td>
+    </tr>
+  </tbody>
+</table>

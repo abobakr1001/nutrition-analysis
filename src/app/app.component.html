@@ -1,0 +1,43 @@
+
+
+
+
+
+<app-loading-spinner [loading]="loading"></app-loading-spinner>
+
+<div class="container mt-5" >
+  <div class="row">
+    <!-- Input and Table Section -->
+    <div class="col-md-8">
+      <h2>Nutrition Analysis</h2>
+     <div class="mb-3">
+      <textarea
+        #ingredientInput
+        cols="30" rows="10"
+        placeholder="Enter each ingredient on a new line."
+      ></textarea>
+    </div>
+      <div class="d-flex Des-Buttons">
+        <button
+          (click)="addIngredient(ingredientInput.value); ingredientInput.value = '' " > addIngredient
+        </button>
+        <button (click)="newRecipe()">New recipe</button>
+      </div>
+
+   <app-total-nutrition
+        [ingredients]="ingredientTotal$ | async"
+      ></app-total-nutrition>
+
+
+
+  </div>
+
+<div class="col-md-4" >
+      <app-ingredients-summary [result]="result$ | async"></app-ingredients-summary>
+    </div>
+
+  </div>
+</div>
+
+
+
